@@ -1,0 +1,136 @@
+.sve-usluge {
+    margin-top: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.jedna-usluga {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    margin-bottom: 100px;
+}
+
+.usluga-galerija {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+}
+
+.usluga-galerija-glavna-slika img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.usluga-galerija-slike {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    column-gap: 25px;
+    justify-content: center;
+}
+
+.usluga-galerija-slike img {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    padding: 5px;
+    border: 2px solid #BD784F;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.usluga-galerija-slike img:hover {
+    transform: scale(1.1);
+}
+
+.usluga-text {
+    background-color: #BD784F;
+    color: #FCFBFB;
+    padding: 50px;
+}
+
+.usluga-text h1 {
+    font-size: 3.5rem;
+    font-family: 'EB Garamond', sans-serif;
+    text-align: center;
+    color: #FCFBFB;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.usluga-text h1::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #3F3F3F;
+}
+
+.usluga-text p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.drugi-stil {
+    background-color: #3F3F3F;
+    order: -1;
+}
+
+.usluga-text.drugi-stil h1 {
+    color: #d3cccc;
+}
+
+.usluga-text.drugi-stil h1::before {
+    background-color: #d3cccc;
+}
+
+.usluga-text.drugi-stil p {
+    color: #d3cccc;
+}
+
+@media screen and (max-width: 768px) {
+    .jedna-usluga {
+        grid-template-columns: 1fr;
+    }
+
+    .usluga-galerija {
+        order: 1;
+    }
+
+    .drugi-stil {
+        order: initial;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .no-p {
+        padding: 150px 0;
+    }
+
+    .usluga-text {
+        padding: 50px 20px;
+    }
+
+    .usluga-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .usluga-text p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .usluga-galerija-slike {
+        grid-template-columns: repeat(3, 100px);
+    }
+
+    .usluga-galerija-slike img {
+        height: 80px;
+    }
+}

@@ -1,0 +1,912 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FCFCFB;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+/*contact info*/
+
+.contact-info {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FCFCFB;
+}
+
+.contact-list {
+    display: flex;
+    margin-top: 5px;
+}
+
+.contact-item {
+    margin: 0 10px;
+    display: flex;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #BD784F;
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-data-main {
+    font-weight: 600;
+    color: #3F3F3F;
+}
+
+.contact-data-second {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #909090;
+}
+
+/*navigacija*/
+
+.navigation {
+    background-color: #565656;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navigation-list {
+    display: flex;
+    margin-left: 100px;
+}
+
+.navigation-item {
+    margin: 0 30px;
+}
+
+.navigation-item.usluge-item {
+    position: relative;
+    z-index: 100;
+}
+
+.navigation-item.o-nama-item {
+    position: relative;
+    z-index: 99;
+}
+
+.usluge-lista {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 250px;
+    height: 0;
+    background-color: #565656;
+    color: #d3cccc;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.navigation-item.usluge-item:hover .usluge-lista {
+    height: 400px;
+    padding: 20px;
+}
+
+
+.o-nama-lista {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 250px;
+    height: 0;
+    background-color: #565656;
+    color: #d3cccc;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+
+
+.navigation-item.o-nama-item:hover .o-nama-lista {
+    height: 250px;
+    padding: 20px;
+}
+
+
+
+
+.navigation-item.close {
+    display: none;
+    cursor: pointer;
+}
+
+.navigation-link {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d3cccc;
+    transition: .5s ease;
+}
+
+.navigation-link-usluge {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #d3cccc;
+    transition: .5s ease;
+    display: inline-block;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.navigation-link-o-nama {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #d3cccc;
+    transition: .5s ease;
+    display: inline-block;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-link-usluge:hover {
+    color: #FCFCFB;
+}
+
+.navigation-link-o-nama:hover {
+    color: #FCFCFB;
+}
+
+.navigation-link:hover {
+    color: #FCFCFB;
+}
+
+.toggle {
+    display: none;
+}
+
+
+/*pocetna*/
+
+.pocetna-section {
+    margin-top: 130px;
+    height: calc(100vh - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(86, 86, 86, 0.6), rgba(86, 86, 86, 0.6)), url('images/pozadina-pocetna.jpg') center no-repeat;
+    background-size: cover;
+}
+
+
+.pocetna-sadrzaj {
+    width: 60%;
+    text-align: center;
+}
+
+.pocetna-sadrzaj h1 {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 3rem;
+    color: #FCFCFB;
+}
+
+.pocetna-sadrzaj p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #FCFCFB;
+}
+
+.pocetna-sadrzaj a {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 25px;
+    background-color: #BD784F;
+    color: #FCFCFB;
+    text-transform: uppercase;
+    transition: .5s ease;
+}
+
+.pocetna-sadrzaj a:hover {
+    background-color: #FCFCFB;
+    color: #BD784F;
+}
+
+/*pomoc section*/
+
+.pomoc-section {
+    padding: 15px 50px;
+    font-size: 1.1rem;
+    background-color: #BD784F;
+    color: #FCFCFB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pomoc-section a {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #FCFCFB;
+    font-size: 1.1rem;
+    color: #BD784F;
+    transition: .5s ease;
+}
+
+.pomoc-section a:hover {
+    color: #FCFCFB;
+    background-color: #BD784F;
+}
+
+
+/*usluge*/
+
+.usluge-section {
+    padding: 150px 50px;
+}
+
+.naslov {
+    font-size: 2rem;
+    font-family: 'EB Garamond', sans-serif;
+    text-align: center;
+    color: #3F3F3F;
+    position: relative;
+}
+
+.naslov::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #BD784F;
+}
+
+.usluge {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 100px;
+}
+
+.usluga h1 {
+    color: #3F3F3F;
+    margin-bottom: 20px;
+}
+
+.usluga h1 i {
+    margin-right: 10px;
+    color: #BD784F;
+}
+
+.usluga p {
+    width: 80%;
+    margin-bottom: 20px;
+    color: #3F3F3F;
+    font-size: 1.1rem;
+}
+
+.usluga a {
+    color: #BD784F;
+    font-size: 1.1rem;
+}
+
+/* o nama*/
+
+.o-nama-section {
+    padding: 150px 50px;
+}
+
+.o-nama {
+    margin-top: 100px;
+}
+
+.o-nama-tekst-slika {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    column-gap: 0;
+}
+
+.o-nama-slika {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-nama-slika img {
+    max-width: 100%;
+    height: auto;
+}
+
+.o-nama-tekst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #3F3F3F;
+    text-align: justify;
+    order: 1;
+}
+
+
+.o-nama-galerije {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    column-gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.o-nama-galerija-slika {
+    position: relative;
+    overflow: hidden;
+}
+
+.o-nama-galerija-slika img {
+    max-width: 100%;
+    height: auto;
+    transition: .5s ease;
+}
+
+.o-nama-galerija-slika:hover img {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+
+.o-nama-galerija-slika-tekst {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 63, 63, 0.4);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+}
+
+.o-nama-galerija-slika-tekst a {
+    padding: 10px 25px;
+    background-color: #BD784F;
+    color: #FCFCFB;
+    text-transform: uppercase;
+    transition: .5s ease;
+}
+
+.o-nama-galerija-slika-tekst a:hover {
+    background-color: #FCFCFB;
+    color: #BD784F;
+}
+
+.o-nama-galerija-slika:hover .o-nama-galerija-slika-tekst {
+    top: 0;
+}
+
+.o-nama-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.o-nama-link a {
+
+    padding: 10px 25px;
+    background-color: #BD784F;
+    color: #FCFCFB;
+    text-transform: uppercase;
+    transition: .5s ease;
+}
+
+.o-nama-link a:hover {
+    transform: scale(1.2);
+}
+
+
+.desno {
+    order: 1;
+}
+
+
+/*utisci*/
+
+.utisci-section {
+    padding: 150px 50px;
+}
+
+.utisci {
+    margin-top: 100px;
+}
+
+.utisak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.utisak-slika {
+    width: 150px;
+}
+
+.utisak-slika img {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    border-top: 2px solid #BD784F;
+    border-bottom: 2px solid #BD784F;
+}
+
+.utisak-tekst {
+    margin-left: 50px;
+    text-align: center;
+}
+
+.utisak-tekst p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #3F3F3F;
+    margin-bottom: 10px;
+}
+
+.utisak-tekst p.ime {
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    position: relative;
+    display: inline;
+}
+
+.utisak-tekst p.ime::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+    width: 10px;
+    height: 2px;
+    background-color: #BD784F;
+}
+
+
+.levo {
+    margin-left: 0;
+    margin-right: 50px;
+}
+
+/*kontakt*/
+
+.kontakt-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.kontakt-info {
+    background-color: #BD784F;
+    padding: 100px 50px;
+}
+
+.kontakt-info h1 {
+    font-family: 'EB Garamond', sans-serif;
+    color: #FCFCFB;
+    margin-bottom: 20px;
+}
+
+.kontakt-info a {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 25px;
+    background-color: #565656;
+    color: #FCFCFB;
+    transition: .5s ease;
+}
+
+.kontakt-info a:hover {
+    color: #565656;
+    background-color: #FCFCFB;
+}
+
+.kontakt-info p {
+    color: #FCFCFB;
+}
+
+.kontakt-info .kontakt-telefon {
+    margin: 50px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: #BD784F;
+    background-color: #FCFCFB;
+}
+
+.kontakt-info .kontakt-telefon p {
+    color: #BD784F;
+}
+
+.kontakt-info .kontakt-telefon .kontakt-telefon-icon {
+    margin-right: 20px;
+}
+
+.kontakt-info .kontakt-telefon .kontakt-telefon-icon i {
+    font-size: 2rem;
+}
+
+.kontakt-forma {
+    background-color: #565656;
+    padding: 100px 50px;
+}
+
+.kontakt-forma h1 {
+    font-family: 'EB Garamond', sans-serif;
+    text-align: center;
+    color: #d3cccc;
+    margin-bottom: 50px;
+}
+
+.kontakt-forma form {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-forma form input {
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.kontakt-forma form input::placeholder {
+    color: #BD784F;
+}
+
+.kontakt-forma form textarea {
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.kontakt-forma form textarea::placeholder {
+    color: #BD784F;
+}
+
+.kontakt-forma form input[type='submit'] {
+    background-color: #BD784F;
+    color: #FCFCFB;
+}
+
+@media screen and (max-width:1024px) {
+
+    .o-nama-tekst-slika {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    .o-nama-slika {
+        margin-left: 40px;
+    }
+
+    .o-nama-galerije {
+        grid-template-columns: 350px 350px;
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .contact-logo {
+        margin: auto 0;
+    }
+
+    .contact-icon {
+        align-items: center;
+    }
+
+    .contact-data {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation-list {
+        margin: 0 auto;
+    }
+
+    .pomoc-section {
+        flex-direction: column;
+    }
+
+    .pomoc-section a {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .usluga h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .usluga p {
+        width: 100%;
+    }
+
+    .desno {
+        order: -1;
+    }
+
+    .utisak-slika.desno {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 725px) {
+
+    .contact-logo {
+        margin: auto;
+    }
+
+    .contact-list {
+        display: none;
+    }
+
+    .navigation-list {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #3F3F3F;
+        transition: 0.5s ease;
+    }
+
+    .navigation-item {
+        margin: 40px 0;
+    }
+
+    .navigation-item.close {
+        display: initial;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        font-size: 2rem;
+        color: #d3cccc;
+    }
+
+    .o-nama-lista {
+        background-color: #3F3F3F;
+        left: -75%;
+    }
+
+    .usluge-lista {
+        background-color: #3F3F3F;
+        left: -75%;
+    }
+
+    .toggle {
+        display: initial;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .toggle i {
+        font-size: 1.5rem;
+        color: #d3cccc;
+    }
+
+    .o-nama-galerije {
+        grid-template-columns: 250px 250px;
+    }
+
+    .kontakt-section {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakt-forma {
+        order: -1;
+    }
+
+    .kontakt-info .kontakt-telefon {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+
+    .pocetna-sadrzaj {
+        width: 90%;
+    }
+
+
+    .pomoc-section a {
+        margin-top: 20px;
+    }
+
+    .usluge {
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+    }
+
+    .usluga p {
+        text-align: justify;
+    }
+
+    .o-nama-galerije {
+        grid-template-columns: 200px 200px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .pocetna-section {
+        background: linear-gradient(to right, rgba(86, 86, 86, 0.6), rgba(86, 86, 86, 0.6)), url('images/pozadina-pocetna.jpg') -280px no-repeat;
+        background-size: cover;
+    }
+
+    .pocetna-sadrzaj {
+        width: 90%;
+    }
+
+    .pocetna-sadrzaj h1 {
+        font-size: 2.5rem;
+    }
+
+    .pocetna-sadrzaj p {
+        margin-top: 20px;
+        font-size: 1.1rem;
+    }
+
+    .pocetna-sadrzaj a {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .pomoc-section {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .o-nama-section {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .o-nama-slika {
+        margin-left: 20px;
+    }
+
+    .o-nama-galerije {
+        grid-template-columns: 250px;
+    }
+
+    .utisci-section {
+        padding: 150px 15px;
+    }
+
+    .utisak {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .utisak-tekst {
+        margin-top: 15px;
+        margin-left: 0;
+        text-align: center
+    }
+
+    .utisak-slika.desno {
+        order: -1;
+    }
+
+    .utisak-tekst.levo {
+        margin-right: 0;
+    }
+
+    .kontakt-forma form input {
+        padding: 10px;
+    }
+
+    .kontakt-forma form textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .kontakt-forma form textarea {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .kontakt-info,
+    .kontakt-forma {
+        padding: 100px 0;
+    }
+
+    .kontakt-info {
+        text-align: center;
+    }
+
+    .kontakt-info .kontakt-telefon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .kontakt-info h1 {
+        padding: 0 10px;
+    }
+
+    .kontakt-info p {
+        padding: 0 20px;
+    }
+
+    .kontakt-forma form {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+.open {
+    left: 0;
+}

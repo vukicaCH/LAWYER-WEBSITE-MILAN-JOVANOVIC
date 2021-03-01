@@ -1,0 +1,116 @@
+.o-nama-slike-tekst {
+    margin-top: 100px;
+}
+
+
+.o-nama-slike-tekst-deo-1 {
+    width: 800px;
+    margin: auto;
+    padding: 150px 50px;
+    background-color: #BD784F;
+    color: #FCFCFB;
+}
+
+.o-nama-slike-tekst-deo-2 {
+    width: 800px;
+    margin: auto;
+    padding: 150px 50px;
+    background-color: #565656;
+    color: #d3cccc;
+}
+
+.o-nama-slike-tekst-deo-3 {
+    width: 800px;
+    margin: auto;
+    padding: 100px 50px;
+    background-color: #BD784F;
+    color: #FCFCFB;
+}
+
+.o-nama-slike-tekst-deo-4 {
+    width: 800px;
+    margin: auto;
+    padding: 150px 50px;
+    background-color: #565656;
+    color: #d3cccc;
+}
+
+.podnaslov {
+    font-size: 3.5rem;
+    font-family: 'EB Garamond', sans-serif;
+    text-align: center;
+    color: #d3cccc;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.podnaslov.reverse {
+    color: #FCFCFB;
+}
+
+.podnaslov::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #d3cccc;
+}
+
+.podnaslov.reverse::before {
+    background-color: #3F3F3F;
+}
+
+.o-nama-slike-tekst p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .o-nama-slike-tekst-deo-1,
+    .o-nama-slike-tekst-deo-2,
+    .o-nama-slike-tekst-deo-3,
+    .o-nama-slike-tekst-deo-4 {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .podnaslov {
+        font-size: 2.5rem;
+    }
+
+    .o-nama-slike-tekst-deo-1,
+    .o-nama-slike-tekst-deo-2,
+    .o-nama-slike-tekst-deo-3,
+    .o-nama-slike-tekst-deo-4 {
+        width: 400px;
+        padding: 150px 25px;
+    }
+
+    .o-nama-slike-tekst p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .o-nama-slike-tekst-deo-1,
+    .o-nama-slike-tekst-deo-2,
+    .o-nama-slike-tekst-deo-3,
+    .o-nama-slike-tekst-deo-4 {
+        width: 300px;
+    }
+
+    .o-nama-slike-tekst p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
